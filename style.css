@@ -3,6 +3,7 @@
   padding: 0;
   font-family: 'Poppins',sans-serif;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 body {
   background: #080808;
@@ -17,7 +18,7 @@ header{
 }
 .logo{
   width: 50px;
-  background-color: #080808;
+  background-color: #616161;
   padding: 5px;
 }
 nav {
@@ -27,7 +28,7 @@ nav {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  background-color: #080808;
+  background-color: #616161;
   padding: 10px 10%;
 }
 nav a {
@@ -132,10 +133,13 @@ nav a:hover::after{
   background-color: #615959;
   
 }
+.about-contents span{
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+}
 
-
-/* Page Class Section */
-/* .page {
+Page Class Section
+.page {
   margin: 0px;
   padding: 20px;
   height: 100vh;
@@ -143,4 +147,4 @@ nav a:hover::after{
 .page h1 {
   padding: 30px;
   text-align: center;
-} */
+}
