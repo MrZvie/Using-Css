@@ -66,7 +66,7 @@ nav a:hover::after{
 #home .container {
   display: flex;
   flex-direction: row-reverse;
-  align-items: center;
+  justify-content: space-evenly;
 }
 #home .container img {
   /* max-width: 400px;
@@ -120,22 +120,14 @@ nav a:hover::after{
   font-weight: 600;
   color: #fff;
 }
-/* .about-titles{
-  margin: 20px 0 40px;
+
+.container-2{
   display: flex;
-  justify-content: space-evenly;
-} */
-.about-contents{
-  margin: 40px;
-  display: flex;
-  justify-content: space-evenly;
-  font-size: 15px;
-  background-color: #615959;
-  
 }
-.about-contents span{
-  font-size: 20px;
-  font-family: 'Times New Roman', Times, serif;
+
+.container-2 .card .imgBx img{
+  max-width: 100px;
+  max-height: 100px;
 }
 
 Page Class Section
