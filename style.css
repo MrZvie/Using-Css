@@ -81,14 +81,12 @@ nav a:hover::after {
   /* max-width: 400px;
   max-height: 400px; */
   background-size: 100%;
-  position: relative;
-  left: 10%;
+  margin-left: 100px;
   background-size: cover;
   background-position: center;
 }
 
 .text {
-  position: relative;
   margin-top: 20%;
   font-size: 30px;
   display: flex;
@@ -108,12 +106,12 @@ nav a:hover::after {
 
 @keyframes effect {
   0% {
-    background: linear-gradient(#ff004f, #0edb30);
+    background: linear-gradient(#12343b, #c89666, #2d545e, #c89666);
     -webkit-background-clip: text;
   }
 
   100% {
-    background: linear-gradient(#031f6b, #0fbb48);
+    background: linear-gradient(#2d545e, #c89666, #12343b);
     -webkit-background-clip: text;
   }
 }
@@ -162,7 +160,7 @@ nav a:hover::after {
 /* For hover effects in about */
 .container-2 {
   display: flex;
-  position: relative;
+  /* position: relative; */
   width: 100%;
   justify-content: space-around;
   align-items: center;
@@ -170,7 +168,7 @@ nav a:hover::after {
 }
 
 .container-2 .card {
-  position: relative;
+  /* position: relative; */
   background-color: #221f1f;
   max-width: 200px;
   height: 200px;
