@@ -434,6 +434,41 @@ nav a:hover::after {
   background-color: #8c9eff;
 }
 
+input, label{
+  display: none;
+}
+
+
+/* Responsive Section */
+
+@media screen and (max-width: 500px){
+  header{
+    display: block;
+    
+  }
+  label{
+    display: block;
+  }
+  nav{
+    width: 150px;
+    position: absolute;
+    background: #616161;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+  }
+  nav a, nav label{
+    color: #fff;
+  }
+  nav label{
+    text-align: right;
+  }
+  nav a{
+    position: absolute;
+    flex-direction: column;
+  }
+} 
+
 
 
 /* Page Section */
