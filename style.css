@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: monospace;
+  font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
@@ -91,36 +91,48 @@ nav a:hover::after {
   margin-top: 20%;
   font-size: 30px;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   align-items: center;
 }
 
 .text h1 {
-  font-size: 80px;
+  font-size: 50px;
   margin-top: 20px;
+  display: flex;
 }
 
-.text h1 span {
-  /* color: transparent;
-  animation: effect 2s linear infinite; */
-  color: #ff004f;
+.text .type {
+  margin: 0 auto;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid rgb(192, 27, 55);
+  animation: typing 3.5s steps(30, end) infinite,
+    blinking-cursor 0.5s step-end infinite;
 }
 
-/* @keyframes effect {
+@keyframes typing {
   0% {
-    background: linear-gradient(#12343b, #c89666, #2d545e, #c89666);
-    -webkit-background-clip: text;
+    width: 0;
+    color: #ff004f;
   }
   100% {
-    background: linear-gradient(#2d545e, #c89666, #12343b);
-    -webkit-background-clip: text;
+    width: 100%;
+    color: #ff004f;
   }
-} */
-
+}
+@keyframes blinking-cursor {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: rgb(156, 132, 136);
+  }
+}
 
 /* About Section */
 #about {
-  padding: 80px;
+  padding: 80px 10px;
 }
 
 #about .container-1 {
@@ -183,9 +195,8 @@ nav a:hover::after {
 
 .container-2 .card:hover {
   height: 300px;
-  box-shadow: 
-  rgb(31, 180, 88) -5px 30px 40px -10px,
-  rgb(42, 175, 232) 10px 30px 40px -10px
+  box-shadow: rgb(31, 180, 88) -5px 30px 40px -10px,
+    rgb(42, 175, 232) 10px 30px 40px -10px;
 }
 
 .container-2 .card .imgBx {
@@ -219,9 +230,187 @@ nav a:hover::after {
   transition-delay: 0.3s;
 }
 
+/* Project Section */
+#project {
+  padding: 50px 0;
+}
+.my-project {
+  display: flex;
+  margin: 30px 10px;
+  padding: 20px 15px;
+}
+.work img {
+  max-width: 300px;
+  max-height: 300px;
+  margin: 30px 10px;
+  padding: 20px 15px;
+}
+
+/* Contact Section */
+#contact {
+  padding: 50px 0;
+}
+
+#contact p {
+  display: flex;
+  justify-content: center;
+}
+
+.main {
+  margin-top: 2%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  align-items: center;
+}
+
+/* .main img {
+  max-width: 50px;
+  max-height: 50px;
+} */
+
+.card1 img {
+  max-width: 80px;
+  max-height: 80px;
+}
+.card2 img {
+  max-width: 80px;
+  max-height: 80px;
+}
+.card3 img {
+  max-width: 130px;
+  max-height: 130px;
+}
+.card4 img {
+  max-width: 80px;
+  max-height: 80px;
+}
+.up {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+}
+
+.down {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+}
+
+.card1 {
+  width: 200px;
+  height: 200px;
+  outline: none;
+  border: none;
+  background: #616161;
+  border-radius: 90px 5px 5px 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: 0.2s ease-in-out;
+}
+
+.instagram {
+  margin-top: 1.5em;
+  margin-left: 1.2em;
+  fill: #cc39a4;
+}
+
+.card2 {
+  width: 200px;
+  height: 200px;
+  outline: none;
+  border: none;
+  background: #616161;
+  border-radius: 5px 90px 5px 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: 0.2s ease-in-out;
+}
+
+.fb {
+  margin-top: 1.5em;
+  margin-left: -0.9em;
+  fill: #03a9f4;
+}
+
+.card3 {
+  width: 200px;
+  height: 200px;
+  outline: none;
+  border: none;
+  background: #616161;
+  border-radius: 5px 5px 5px 90px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: 0.2s ease-in-out;
+}
+
+.github {
+  margin-top: -0.6em;
+  margin-left: 1.2em;
+}
+
+.card4 {
+  width: 200px;
+  height: 200px;
+  outline: none;
+  border: none;
+  background: #616161;
+  border-radius: 5px 5px 90px 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: 0.2s ease-in-out;
+}
+
+.tg {
+  margin-top: -0.9em;
+  margin-left: -1.2em;
+  fill: #8c9eff;
+}
+
+.card1:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: #cc39a4;
+}
+
+.card1:hover .instagram {
+  fill: white;
+}
+
+.card2:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: #03a9f4;
+}
+
+.card2:hover .fb {
+  fill: white;
+}
+
+.card3:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: rgb(65, 211, 7);
+}
+
+.card3:hover .github {
+  fill: rgb(255, 255, 255);
+}
+
+.card4:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: #8c9eff;
+}
+
+.card4:hover .tg {
+  fill: white;
+}
+
 /* Page Section */
 .page {
-  margin: 0px;
+  margin: 10px;
   padding: 20px;
   height: 100vh;
 }
