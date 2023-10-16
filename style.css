@@ -1,7 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Poppins", sans-serif;
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
@@ -13,26 +15,29 @@ body {
 
 /* Menu Section */
 header {
+  top: 0;
+  right: 0;
   position: fixed;
+  padding: 0 5%;
   width: 100%;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #616161;
   z-index: 999;
 }
 
 .logo {
   width: 50px;
-  background-color: #616161;
   padding: 5px;
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  font-weight: 600;
 }
 
 nav {
-  width: 100%;
-  top: 0;
-  right: 0;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  background-color: #616161;
   padding: 10px 10%;
 }
 
@@ -42,6 +47,7 @@ nav a {
   text-decoration: none;
   padding: 5px;
   font-size: 18px;
+  font-weight: 500;
   position: relative;
 }
 
@@ -76,6 +82,7 @@ nav a:hover::after {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-around;
+  align-items: center;
 }
 
 #home .container img {
@@ -104,8 +111,9 @@ nav a:hover::after {
 .text .type {
   margin: 0 auto;
   overflow: hidden;
+  color: transparent;
   white-space: nowrap;
-  border-right: 2px solid rgb(192, 27, 55);
+  border-right: 3px solid rgb(192, 27, 55);
   animation: typing 3.5s steps(30, end) infinite,
     blinking-cursor 0.5s step-end infinite;
 }
@@ -113,11 +121,11 @@ nav a:hover::after {
 @keyframes typing {
   0% {
     width: 0;
-    color: #ff004f;
+    -webkit-text-stroke: 2px #ff004f;
   }
   100% {
     width: 100%;
-    color: #ff004f;
+    -webkit-text-stroke: 2px #ff004f;
   }
 }
 @keyframes blinking-cursor {
@@ -126,13 +134,15 @@ nav a:hover::after {
     border-color: transparent;
   }
   50% {
-    border-color: rgb(156, 132, 136);
+    border-color: rgb(192, 27, 55);
   }
 }
 
 /* About Section */
 #about {
-  padding: 80px 10px;
+  padding: 70px 10px;
+  height: 100vh;
+  width: 100%;
 }
 
 #about .container-1 {
@@ -160,12 +170,10 @@ nav a:hover::after {
   margin: 10px;
 }
 
-.text-1 h1 {
-  margin: 10px;
-}
-
 .upper-title {
-  font-size: 60px;
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
   font-weight: 600;
   color: #fff;
 }
@@ -233,34 +241,38 @@ nav a:hover::after {
 /* Project Section */
 #project {
   padding: 50px 0;
+  height: 100vh;
 }
 .my-project {
   display: flex;
   margin: 30px 10px;
   padding: 20px 15px;
+  justify-content: space-around;
 }
-.work img {
+.work1 img {
+  max-width: 400px;
+  max-height: 250px;
+}
+.work2 img {
   max-width: 300px;
-  max-height: 300px;
-  margin: 30px 10px;
-  padding: 20px 15px;
+  max-height: 360px;
+}
+.work3 img {
+  max-width: 290px;
+  max-height: 320px;
 }
 
 /* Contact Section */
 #contact {
-  padding: 50px 0;
-}
-
-#contact p {
-  display: flex;
-  justify-content: center;
+  padding: 30px 0;
+  height: 100vh;
 }
 
 .main {
-  margin-top: 2%;
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
-  gap: 0.5em;
+  gap: 10px;
   align-items: center;
 }
 
@@ -288,13 +300,13 @@ nav a:hover::after {
 .up {
   display: flex;
   flex-direction: row;
-  gap: 0.5em;
+  gap: 10px;
 }
 
 .down {
   display: flex;
   flex-direction: row;
-  gap: 0.5em;
+  gap: 10px;
 }
 
 .card1 {
@@ -312,7 +324,6 @@ nav a:hover::after {
 .instagram {
   margin-top: 1.5em;
   margin-left: 1.2em;
-  fill: #cc39a4;
 }
 
 .card2 {
@@ -330,7 +341,6 @@ nav a:hover::after {
 .fb {
   margin-top: 1.5em;
   margin-left: -0.9em;
-  fill: #03a9f4;
 }
 
 .card3 {
@@ -365,17 +375,12 @@ nav a:hover::after {
 .tg {
   margin-top: -0.9em;
   margin-left: -1.2em;
-  fill: #8c9eff;
 }
 
 .card1:hover {
   cursor: pointer;
   scale: 1.1;
-  background-color: #cc39a4;
-}
-
-.card1:hover .instagram {
-  fill: white;
+  background-color: rgb(172, 151, 151);
 }
 
 .card2:hover {
@@ -384,18 +389,10 @@ nav a:hover::after {
   background-color: #03a9f4;
 }
 
-.card2:hover .fb {
-  fill: white;
-}
-
 .card3:hover {
   cursor: pointer;
   scale: 1.1;
   background-color: rgb(65, 211, 7);
-}
-
-.card3:hover .github {
-  fill: rgb(255, 255, 255);
 }
 
 .card4:hover {
@@ -404,12 +401,8 @@ nav a:hover::after {
   background-color: #8c9eff;
 }
 
-.card4:hover .tg {
-  fill: white;
-}
-
 /* Page Section */
-.page {
+/* .page {
   margin: 10px;
   padding: 20px;
   height: 100vh;
@@ -418,4 +411,4 @@ nav a:hover::after {
 .page h1 {
   padding: 30px;
   text-align: center;
-}
+} */
