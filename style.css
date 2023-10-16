@@ -38,17 +38,16 @@ header {
 }
 
 nav {
+  position: relative;
   display: flex;
   padding: 10px 10%;
   align-items: center;
+  justify-content: flex-end;
 }
 
-nav i{
-  font-size: 10px;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  
+nav i {
+  font-size: 15px;
+  margin-right: 7px;
 }
 
 nav a {
@@ -96,10 +95,8 @@ nav a:hover::after {
 }
 
 #home .container img {
-  /* max-width: 400px;
-  max-height: 400px; */
   background-size: 100%;
-  margin-left: 100px;
+  margin-left: 200px;
   background-size: cover;
   background-position: center;
 }
@@ -133,16 +130,20 @@ nav a:hover::after {
     width: 0;
     -webkit-text-stroke: 2px #ff004f;
   }
+
   100% {
     width: 100%;
     -webkit-text-stroke: 2px #ff004f;
   }
 }
+
 @keyframes blinking-cursor {
+
   from,
   to {
     border-color: transparent;
   }
+
   50% {
     border-color: rgb(192, 27, 55);
   }
@@ -162,6 +163,7 @@ nav a:hover::after {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  margin-right: 50px;
 }
 
 .img-1 {
@@ -169,12 +171,13 @@ nav a:hover::after {
 }
 
 .container-1 .img-1 img {
-  width: 100%;
+  width: 65%;
   border-radius: 15px;
+  margin-left: 50px;
 }
 
 .text-1 {
-  flex-basis: 60%;
+  flex-basis: 65%;
   background-color: #383535;
 }
 
@@ -195,6 +198,8 @@ nav a:hover::after {
   display: flex;
   position: relative;
   width: 100%;
+  height: 400px;
+  bottom: 10px;
   justify-content: space-around;
   align-items: center;
   padding: 30px;
@@ -250,8 +255,9 @@ nav a:hover::after {
   transition-delay: 0.3s;
 }
 
-.content p{
+.content p {
   font-size: 15px;
+  word-spacing: 5px;
 }
 
 
@@ -260,20 +266,24 @@ nav a:hover::after {
   padding: 50px 0;
   height: 100vh;
 }
+
 .my-project {
   display: flex;
   margin: 30px 10px;
   padding: 20px 15px;
   justify-content: space-around;
 }
+
 .work1 img {
   max-width: 400px;
   max-height: 250px;
 }
+
 .work2 img {
   max-width: 300px;
   max-height: 360px;
 }
+
 .work3 img {
   max-width: 290px;
   max-height: 320px;
@@ -303,18 +313,22 @@ nav a:hover::after {
   max-width: 80px;
   max-height: 80px;
 }
+
 .card2 img {
   max-width: 80px;
   max-height: 80px;
 }
+
 .card3 img {
   max-width: 130px;
   max-height: 130px;
 }
+
 .card4 img {
   max-width: 80px;
   max-height: 80px;
 }
+
 .up {
   display: flex;
   flex-direction: row;
@@ -420,6 +434,8 @@ nav a:hover::after {
   scale: 1.1;
   background-color: #8c9eff;
 }
+
+
 
 /* Page Section */
 /* .page {
