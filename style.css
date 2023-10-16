@@ -40,6 +40,15 @@ header {
 nav {
   display: flex;
   padding: 10px 10%;
+  align-items: center;
+}
+
+nav i{
+  font-size: 10px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  
 }
 
 nav a {
@@ -141,9 +150,11 @@ nav a:hover::after {
 
 /* About Section */
 #about {
-  padding: 70px 10px;
+  padding: 70px 30px;
   height: 100vh;
   width: 100%;
+  align-items: center;
+  display: flex;
 }
 
 #about .container-1 {
@@ -203,7 +214,7 @@ nav a:hover::after {
 }
 
 .container-2 .card:hover {
-  height: 300px;
+  height: 320px;
   box-shadow: rgb(31, 180, 88) -5px 30px 40px -10px,
     rgb(42, 175, 232) 10px 30px 40px -10px;
 }
@@ -239,6 +250,11 @@ nav a:hover::after {
   transition-delay: 0.3s;
 }
 
+.content p{
+  font-size: 15px;
+}
+
+
 /* Project Section */
 #project {
   padding: 50px 0;
@@ -272,6 +288,7 @@ nav a:hover::after {
 .main {
   margin-top: 30px;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   gap: 10px;
   align-items: center;
@@ -311,6 +328,7 @@ nav a:hover::after {
 }
 
 .card1 {
+  margin-top: 30px;
   width: 200px;
   height: 200px;
   outline: none;
@@ -328,6 +346,7 @@ nav a:hover::after {
 }
 
 .card2 {
+  margin-top: 30px;
   width: 200px;
   height: 200px;
   outline: none;
