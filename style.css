@@ -15,33 +15,26 @@ body {
 
 /* Menu Section */
 header {
-  top: 0;
-  right: 0;
   position: fixed;
-  padding: 0 5%;
   width: 100%;
+  background: #616161;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  background-color: #616161;
+  padding: 0 5%;
   z-index: 999;
 }
-
 .logo {
-  width: 50px;
-  padding: 5px;
-  text-decoration: none;
   color: white;
   font-size: 30px;
   font-weight: 600;
+  text-decoration: none;
+  padding: 5px;
 }
-
 nav {
   position: relative;
   display: flex;
-  padding: 10px 10%;
   align-items: center;
-  justify-content: flex-end;
 }
 
 nav i {
@@ -49,13 +42,17 @@ nav i {
   margin-right: 7px;
 }
 
+label {
+  display: none;
+}
+
 nav a {
   color: white;
   margin: 0 20px;
-  text-decoration: none;
   padding: 5px;
   font-size: 18px;
   font-weight: 500;
+  text-decoration: none;
   position: relative;
 }
 
@@ -72,6 +69,43 @@ nav a::after {
 
 nav a:hover::after {
   width: 100%;
+}
+
+@media screen and (max-width: 548px) {
+  label {
+    display: block;
+  }
+
+
+  nav {
+    position: fixed;
+    width: 150px;
+    background: #fff;
+    flex-direction: column;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
+    align-items: center;
+    transition: 0.3s ease;
+    z-index: 999;
+  }
+
+  nav a, nav label {
+    color: #111;
+    font-size: 20px;
+  }
+
+  nav label {
+    text-align: right;
+  }
+
+  input:checked ~ nav {
+    visibility: visible;
+    opacity: 1;
+  }
 }
 
 /* Home Section */
@@ -137,7 +171,6 @@ nav a:hover::after {
 }
 
 @keyframes blinking-cursor {
-
   from,
   to {
     border-color: transparent;
@@ -258,7 +291,6 @@ nav a:hover::after {
   font-size: 15px;
   word-spacing: 5px;
 }
-
 
 /* Project Section */
 #project {
@@ -433,42 +465,6 @@ nav a:hover::after {
   scale: 1.1;
   background-color: #8c9eff;
 }
-
-input, label{
-  display: none;
-}
-
-
-/* Responsive Section */
-
-@media screen and (max-width: 500px){
-  header{
-    display: block;
-    
-  }
-  label{
-    display: block;
-  }
-  nav{
-    width: 150px;
-    position: absolute;
-    background: #616161;
-    top: 10px;
-    right: 10px;
-    padding: 10px;
-  }
-  nav a, nav label{
-    color: #fff;
-  }
-  nav label{
-    text-align: right;
-  }
-  nav a{
-    position: absolute;
-    flex-direction: column;
-  }
-} 
-
 
 
 /* Page Section */
